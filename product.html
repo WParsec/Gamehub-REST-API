@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Gamehub product page"/>
+    <title>Gamehub | Product </title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header class="nav-header">
+        <div class="nav-wrap">
+            <div class="hamburger-menu navbar-div" id="hamburger-activation" aria-labelledby="hamburger-menu"><img src="/svg/hamburger.svg" class="navbar-icon" alt="hamburger"></div>
+            <div class="dropdown-menu">
+                <a class="dropdown-menu-link" href="index.html">Home</a>
+                <a class="dropdown-menu-link" href="games.html">All games</a>
+                <a class="dropdown-menu-link" href="login.html">Account</a>
+                <a class="dropdown-menu-link" href="contact.html">Contact</a>
+            </div>
+            <a href="/index.html" class="navbar-icon"><img src="/svg/logo-img.svg" class="navbar-icon" alt="The game-hub logo"></a>
+            <input type="search" name="search" id="search" placeholder="Browse the universe">
+            <a href="login.html" class="navbar-div"><img src="/svg/profile-icon.svg" class="navbar-icon-right" alt="profile-icon"></a>
+            <div class="cart-div">
+                <a href="/cart.html" class="navbar-div" id="cartLink"><img src="/svg/cart-icon.svg" class="navbar-icon-right" alt="cart-icon"></a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="hero-image">
+            <div>
+                <h2>The universe of games</h2>
+            </div>
+        </section>
+        <div class="background">
+            <div class="content-container-product">
+                <div class="breadcrumbs-product">
+                    <a class="breadcrumb-link" href="/index.html">Home</a>
+                </div>
+                <div class="flex-wrap">
+                    <section class="product-image-container">
+                    </section>
+                    <section class="product-information-section">
+                        <div class="product-info-upper"></div>
+                        <div class="favorite-div">
+                            <div class="favorite"></div><p class="favorite-p">Add to favorites</p>
+                        </div>
+                        <div class="selection-wrap">
+                            <select class="platform-select" name="platform-select" id="selectPlatform" aria-labelledby="select-platform">
+                                <option value="not-selected">Select platform</option>
+                            </select>
+                            <select name="condition-select" id="selectCondition" aria-labelledby="select-condition">
+                                <option value="select-condition">Select condition</option>
+                                <option value="new">New</option>
+                                <option value="pre-used">Pre-used</option>
+                                <option value="digital">Digital</option>
+                            </select>
+                        </div>
+                    </section>
+                    <section class="thumbnail-section">
+                    </section>
+                    <section class="add-to-cart-section">
+                        <button class="add-to-cart-button cta-button">Add to cart</button>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-wrap"></div>
+    </footer>
+    <script src="/js/product.js"></script>
+</body>
+</html>

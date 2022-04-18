@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sign up to Gamehub - The universe of games"/>
+    <title>Gamehub | Sign up</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header class="nav-header">
+        <div class="nav-wrap">
+            <div class="hamburger-menu navbar-div" id="hamburger-activation" aria-labelledby="hamburger-menu"><img src="/svg/hamburger.svg" class="navbar-icon" alt="hamburger"></div>
+            <div class="dropdown-menu">
+                <a class="dropdown-menu-link" href="index.html">Home</a>
+                <a class="dropdown-menu-link" href="games.html">All games</a>
+                <a class="dropdown-menu-link" href="login.html">Account</a>
+                <a class="dropdown-menu-link" href="contact.html">Contact</a>
+            </div>
+            <a href="index.html" class="navbar-icon"><img src="/svg/logo-img.svg" class="navbar-icon" alt="The game-hub logo"></a>
+            <input type="search" name="search" id="search" placeholder="Browse the universe">
+            <a href="login.html" class="navbar-div"><img src="/svg/profile-icon.svg" class="navbar-icon-right" alt="profile-icon"></a>
+            <a href="cart.html" class="navbar-div"><img src="/svg/cart-icon.svg" class="navbar-icon-right" alt="cart-icon"></a>
+        </div>
+    </header>
+    <main>
+        <section class="hero-image">
+            <div>
+                <h1>Sign up</h1>
+            </div>
+        </section>
+        <div class="lightsaber-2"></div>
+        <div class="content-container-login">
+            <div class="form-wrap">
+                <form action="submit" id="signupForm">
+                    <div class="login-each-input">
+                        <label for="username">Username</label>
+                        <input type="text" id="username" placeholder="Sephiroth" required minlength="5">
+                        <p class="login-username-error">Error message</p>
+                    </div>
+                    <div class="login-each-input">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" placeholder="Bogdanof69" required minlength="5">
+                        <p class="login-password-error">Error message</p>
+                    </div>
+                    <div class="login-each-input">
+                        <label for="password2">Verify password</label>
+                        <input type="password" id="password2" placeholder="Bogdanof69" required minlength="5">
+                        <p class="login-password2-error">Error message</p>
+                    </div>
+                    <button type="submit" id="signupButton" class="cta-button login-cta">Sign up</button>
+                </form>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-wrap"></div>
+    </footer>
+    <script src="/js/signup.js"></script>
+</body>
+</html>

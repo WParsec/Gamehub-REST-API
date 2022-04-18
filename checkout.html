@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Gamehub product page"/>
+    <title>Gamehub | Checkout </title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header class="nav-header">
+        <div class="nav-wrap">
+            <div class="hamburger-menu navbar-div" id="hamburger-activation" aria-labelledby="hamburger-menu"><img src="/svg/hamburger.svg" class="navbar-icon" alt="hamburger"></div>
+            <div class="dropdown-menu">
+                <a class="dropdown-menu-link" href="index.html">Home</a>
+                <a class="dropdown-menu-link" href="games.html">All games</a>
+                <a class="dropdown-menu-link" href="login.html">Account</a>
+                <a class="dropdown-menu-link" href="contact.html">Contact</a>
+            </div>
+            <a href="/index.html" class="navbar-icon"><img src="/svg/logo-img.svg" class="navbar-icon" alt="The game-hub logo"></a>
+            <input type="search" name="search" id="search" placeholder="Browse the universe">
+            <a href="login.html" class="navbar-div"><img src="/svg/profile-icon.svg" class="navbar-icon-right" alt="profile-icon"></a>
+            <a href="#" class="navbar-div"><img src="/svg/cart-icon.svg" class="navbar-icon-right" alt="cart-icon"></a>
+        </div>
+    </header>
+    <main>
+        <section class="hero-image">
+            <div>
+                <h1>Checkout</h1>
+            </div>
+        </section>
+        <div class="background">
+            <div class="content-container">
+                <div class="breadcrumbs-product">
+                    <a class="breadcrumb-link" href="/index.html">Home</a>
+                </div>
+                <div class="checkout-flex-wrap">
+                        <div class="checkout-form">
+                            <form action="submit" id="checkoutForm">
+                                <div class="each-input-div">
+                                    <label for="name">Name:</label>
+                                    <input name="name" type="text" id="firstName" placeholder="Frodo" aria-labelledby="Name" required minlength="3">
+                                    <div class="name-error form-error">Please enter name</div>
+                                </div>
+                                <div class="email-and-phone-div">
+                                    <div class="each-input-div">
+                                        <label for="email">Email:</label>
+                                        <input name="email" type="email" id="email" placeholder="sauron-slayer69@example.com" required>
+                                        <div class="email-error form-error">Please enter email</div>
+                                    </div>
+                                    <div class="each-input-div">
+                                        <label for="number">Phone number:</label>
+                                        <input name="number" type="number" id="phoneNumber" placeholder="Your phone number">
+                                        <div class="subject-error form-error">Please enter phone number</div>
+                                    </div>
+                                </div> 
+                                <div class="each-input-div">
+                                    <label for="address">Address:</label>
+                                    <input name="address" type="address" id="address" placeholder="The Shire" aria-labelledby="Address" required>
+                                    <div class="address-error form-error">Please enter address</div>
+                                </div>
+                                <div class="each-input-div">
+                                    <label for="zip">ZIP code:</label>
+                                    <input name="zip" type="number" id="zip" placeholder="ZIP code" aria-labelledby="zip" required>
+                                    <div class="zip-error form-error">Please enter zip</div>
+                                </div>
+                                <div class="select-shipping">
+                                    <div class="free-shipping-div shipping-div">
+                                        <input type="radio" name="shipping" id="free-shipping">
+                                        <label class="product-text" for="free-shipping">Free shipping: 3-5 business days (Recommended)</label>
+                                    </div>
+                                    <div class="express-shipping-div shipping-div">
+                                        <input type="radio" name="shipping" id="express-shipping">
+                                        <label class="product-text" for="express-shipping">Express shipping :1-3 business days</label>
+                                    </div>
+                                </div>
+                        </div>
+                    <div class="order-summary">
+                        <div class="summary">
+                            <h3>Order summary</h3>
+                            <p>Subtotal</p>
+                            <p>Shipping</p>
+                            <p>Total</p>
+                        </div>
+                        <div class="summary-checkout">
+                            <a href="/checkout.html"><button class="cta-button">PLACE ORDER</button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-wrap"></div>
+    </footer>
+    <script src="/js/checkout.js"></script>
+</body>
+</html>

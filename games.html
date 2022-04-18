@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Gamehub homepage"/>
+    <title>Gamehub | The universe of games | All Games</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header class="nav-header">
+        <div class="nav-wrap">
+            <div class="hamburger-menu navbar-div" id="hamburger-activation" aria-labelledby="hamburger-menu"><img src="/svg/hamburger.svg" class="navbar-icon" alt="hamburger"></div>
+            <div class="dropdown-menu">
+                <a class="dropdown-menu-link" href="index.html">Home</a>
+                <a class="dropdown-menu-link" href="games.html">All games</a>
+                <a class="dropdown-menu-link" href="login.html">Account</a>
+                <a class="dropdown-menu-link" href="/contact.html">Contact</a>
+            </div>
+            <a href="index.html" class="navbar-icon"><img src="/svg/logo-img.svg" class="navbar-icon" alt="The game-hub logo"></a>
+            <input type="search" name="search" id="search" placeholder="Browse the universe">
+            <a href="login.html" class="navbar-div"><img src="/svg/profile-icon.svg" class="navbar-icon-right" alt="profile-icon"></a>
+            <a href="cart.html" class="navbar-div"><img src="/svg/cart-icon.svg" class="navbar-icon-right" alt="cart-icon"></a>
+        </div>
+    </header>
+    <main>
+        <section class="hero-image">
+            <div>
+                <h1>All Games</h1>
+            </div>
+        </section>
+        <div class="lightsaber"></div>
+        <div class="lightsaber-2"></div>
+        <div class="content-container">
+            <div class="category-bar">
+                <select class="sort-option-select" name="sort-by-condition" id="sortByCondition">
+                    <option value="0">All conditions</option>
+                    <option value="new">New</option>
+                    <option value="used">Pre-used</option>
+                    <option value="digital">Digital</option>
+                </select>
+                <select class="sort-option-select" name="sort-by-price" id="sortByPrice">
+                    <option value="0">All prices</option>
+                    <option value="lowest">Lowest</option>
+                    <option value="highest">Highest</option>
+                </select>
+                <select class="sort-option-select" name="sort-by-platform" id="sortByPlatform">
+                    <option value="0">All platforms</option>
+                    <option value="Playstation">Playstation</option>
+                    <option value="Xbox">Xbox</option>
+                    <option value="PC">PC</option>
+                    <option value="Nintendo">Nintendo</option>
+                </select>
+                <select class="sort-option-select" name="sort-by-genre" id="sortByGenre">
+                    <option value="0">All genres</option>
+                    <option value="action">Action</option>
+                    <option value="adventure">Adventure</option>
+                    <option value="shooter">Shooter</option>
+                    <option value="puzzle">Puzzle</option>
+                </select>
+            </div>
+            <div class="grid-container grid-container-games">
+                Loading...
+            </div>
+        </div>
+    </main>
+    <script src="/js/games.js"></script>
+</body>
+</html>

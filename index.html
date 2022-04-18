@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Gamehub homepage"/>
+    <title>Gamehub | The universe of games | Home</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header class="nav-header">
+        <div class="nav-wrap">
+            <div class="hamburger-menu navbar-div" id="hamburger-activation" aria-labelledby="hamburger-menu"><img src="/svg/hamburger.svg" class="navbar-icon" alt="hamburger"></div>
+            <div class="dropdown-menu">
+                <a class="dropdown-menu-link" href="index.html">Home</a>
+                <a class="dropdown-menu-link" href="games.html">All games</a>
+                <a class="dropdown-menu-link" href="login.html">Account</a>
+                <a class="dropdown-menu-link" href="/contact.html">Contact</a>
+            </div>
+            <a href="/index.html" class="navbar-icon"><img src="/svg/logo-img.svg" class="navbar-icon" alt="The game-hub logo"></a>
+            <input type="search" name="search" id="search" placeholder="Browse the universe">
+            <a href="login.html" class="navbar-div"><img src="/svg/profile-icon.svg" class="navbar-icon-right" alt="profile-icon"></a>
+            <div class="cart-div">
+                <a href="cart.html" class="navbar-div"><img src="/svg/cart-icon.svg" class="navbar-icon-right" alt="cart-icon"></a>
+                <div class="added-to-cart-icon"></div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="hero-image">
+            <div>
+                <h1>The universe of games</h1>
+            </div>
+        </section>
+        <div class="lightsaber"></div>
+        <div class="lightsaber-2"></div>
+        <div class="content-container">
+            <div class="category-bar">
+                <select class="sort-option-select" name="sort-by-condition" id="sortByCondition">
+                    <option value="0">All conditions</option>
+                    <option value="new">New</option>
+                    <option value="used">Pre-used</option>
+                    <option value="digital">Digital</option>
+                </select>
+                <select class="sort-option-select" name="sort-by-price" id="sortByPrice">
+                    <option value="0">All prices</option>
+                    <option value="lowest">Lowest</option>
+                    <option value="highest">Highest</option>
+                </select>
+                <select class="sort-option-select" name="sort-by-platform" id="sortByPlatform">
+                    <option value="0">All platforms</option>
+                    <option value="Playstation">Playstation</option>
+                    <option value="Xbox">Xbox</option>
+                    <option value="PC">PC</option>
+                    <option value="Nintendo">Nintendo</option>
+                </select>
+                <select class="sort-option-select" name="sort-by-genre" id="sortByGenre">
+                    <option value="0">All genres</option>
+                    <option value="action">Action</option>
+                    <option value="adventure">Adventure</option>
+                    <option value="shooter">Shooter</option>
+                    <option value="puzzle">Puzzle</option>
+                </select>
+            </div>
+            <div class="information-bar">
+                <a href="#"><p>Trending</p></a>
+                <a class="all-games" href="games.html"><p>All games ></p></a>
+            </div>
+            <div class="grid-container">
+            </div>
+        </div>
+        <section class="review-section">
+            <div class="review-container review-container-1">
+                <div class="review-image-div"></div>
+                <h3>Zelda</h3>
+                <p class="white-paragraph">"Great site, got what I ordered"</p>
+            </div>
+            <div class="review-container review-container-2">
+                <div class="review-image-div"></div>
+                <h3>Player1</h3>
+                <p class="white-paragraph">"Cool site, the designer must be a genious"</p>
+            </div>
+            <div class="review-container review-container-1">
+                <div class="review-image-div"></div>
+                <h3>Nice site</h3>
+                <p class="white-paragraph">"Wow, look at the dark design"</p>
+            </div>
+            <div class="review-container review-container-2">
+                <div class="review-image-div"></div>
+                <h3>Cloud</h3>
+                <p class="white-paragraph">"Recieved my order even before I ordered it"</p>
+            </div>
+        </section>
+
+    </main>
+    <footer>
+        <div class="footer-wrap"></div>
+    </footer>
+    <script src="/js/script.js"></script>
+</body>
+</html>

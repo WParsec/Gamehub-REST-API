@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Log in to Gamehub - The universe of games"/>
+    <title>Gamehub | Login</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header class="nav-header">
+        <div class="nav-wrap">
+            <div class="hamburger-menu navbar-div" id="hamburger-activation" aria-labelledby="hamburger-menu"><img src="/svg/hamburger.svg" class="navbar-icon" alt="hamburger"></div>
+            <div class="dropdown-menu">
+                <a class="dropdown-menu-link" href="index.html">Home</a>
+                <a class="dropdown-menu-link" href="games.html">All games</a>
+                <a class="dropdown-menu-link" href="login.html">Account</a>
+                <a class="dropdown-menu-link" href="contact.html">Contact</a>
+            </div>
+            <a href="index.html" class="navbar-icon"><img src="/svg/logo-img.svg" class="navbar-icon" alt="The game-hub logo"></a>
+            <input type="search" name="search" id="search" placeholder="Browse the universe">
+            <a href="login.html" class="navbar-div"><img src="/svg/profile-icon.svg" class="navbar-icon-right" alt="profile-icon"></a>
+            <a href="cart.html" class="navbar-div"><img src="/svg/cart-icon.svg" class="navbar-icon-right" alt="cart-icon"></a>
+        </div>
+    </header>
+    <main>
+        <section class="hero-image">
+            <div>
+                <h1>Log in</h1>
+            </div>
+        </section>
+        <div class="lightsaber-2"></div>
+        <div class="content-container-login">
+            <div class="form-wrap">
+                <form action="submit" id="loginForm">
+                    <div class="login-each-input">
+                        <label for="username">Username</label>
+                        <input type="text" id="username" placeholder="Sephiroth" required minlength="5">
+                        <p class="login-username-error">Error message</p>
+                    </div>
+                    <div class="login-each-input">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" placeholder="Odin69" required minlength="5">
+                        <p class="login-password-error">Error message</p>
+                    </div>
+                    <button type="submit" id="loginButton" class="cta-button login-cta">Log in</button>
+                </form>
+                <p>Not a member?</p>
+                <a href="signup.html"><button class="cta-button cta-signup">Sign up</button></a>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-wrap"></div>
+    </footer>
+    <script src="/js/login.js"></script>
+</body>
+</html>
