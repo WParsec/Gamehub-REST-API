@@ -931,6 +931,38 @@ main {
     background-color: black;
 }
 
+/* --------------------------------------- LOADER --------------------------------------- */
+
+
+.loader {
+    content: '';
+    height: 80px;
+    width: 80px;
+    border: 4px solid #F1D028;
+    display: flex;
+    justify-self: center;
+    position: absolute;
+    border-radius: 50%;
+    animation-name: ring-rotate;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes ring-rotate {
+    from {
+        width: 80px;
+    }
+
+    50% {
+        width: 4px;
+    }
+
+    to {
+        width: 80px;
+    }
+}
+
 
 
 
