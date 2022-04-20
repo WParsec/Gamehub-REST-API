@@ -5,7 +5,7 @@ const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
 const id = params.get("id")
 
-const url = "https://api.rawg.io/api/games/" + id + "?key=54582cd735a340b89b17702eae51578b";
+const url = "https://dev-spider.com/gamehubapi/wp-json/wc/v3/products/" + id + "?consumer_key=ck_8f59d0ac6a2741b3f904f5864c1474aa1bdc892e&consumer_secret=cs_5fb219e10c9e99bb26618c370e601285c0c1e8ff";
 
 async function getGame() {
     try {

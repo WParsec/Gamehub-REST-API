@@ -8,13 +8,14 @@ const breadcrumbs = document.querySelector(".breadcrumbs-product");
 const flexWrap = document.querySelector(".flex.wrap");
 const thumbnailSection = document.querySelector(".thumbnail-section");
 const productInfoUpper = document.querySelector(".product-info-upper");
+const productPrice = document.querySelector(".product-price");
 
 
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
 const id = params.get("id")
 
-const url = "https://api.rawg.io/api/games/" + id + "?key=54582cd735a340b89b17702eae51578b";
+const url = "https://dev-spider.com/gamehubapi/wp-json/wc/v3/products/" + id + "?consumer_key=ck_8f59d0ac6a2741b3f904f5864c1474aa1bdc892e&consumer_secret=cs_5fb219e10c9e99bb26618c370e601285c0c1e8ff";
 
 async function getGame() {
     try {
@@ -36,26 +37,19 @@ getGame();
 
 function createHTML(results) {
 
-    const description = results.description;
-
-    const sentences = description.split(".").filter((item, index) => {
-        if (index < 3) {
-            return item;
-        }
-    })
-
-    background.style.backgroundImage = `url(${results.background_image})`;
-    imageContainer.innerHTML = `<div class="product-image-div" style="background-image: url(${results.background_image});"></div>`
+    background.style.backgroundImage = `url(${results.images[0].src})`;
+    imageContainer.innerHTML = `<div class="product-image-div" style="background-image: url(${results.images[0].src});"></div>`
     productInfoUpper.innerHTML += ` <h1 class="product-name">${results.name}</h1>
-                                    <p class="product-text">Rating: ${results.rating}/5</p>
-                                    <p class="product-text">Genres: ${results.genres[0].name}, ${results.genres[1].name}</p>
-                                    <div class="product-text">${sentences[0]}. ${sentences[1]}.</div>`
+                                    <p class="product-text">Genres: ${results.categories[0].name}, ${results.categories[1].name}</p>
+                                    <div class="product-text">${results.description}</div>
+                                    <span class="rating">Rating: ${results.attributes[0].options[0]}/5</span>`
+    productPrice.innerText = `$${results.price}`
 
 
     thumbnailSection.innerHTML += `<div class="thumbnail-wrap">
-    <div class="product-image-thumbnails" style="background-image: url(${results.background_image});"></div>
-    <div class="product-image-thumbnails" style="background-image: url(${results.background_image_additional});"></div>
-    <div class="product-image-thumbnails" style="background-image: url(${results.background_image});"></div>
+    <div class="product-image-thumbnails" style="background-image: url(${results.images[0].src});"></div>
+    <div class="product-image-thumbnails" style="background-image: url(${results.images[1].src});"></div>
+    <div class="product-image-thumbnails" style="background-image: url(${results.images[2].src});"></div>
     </div>`
 
     breadcrumbs.innerHTML += `<a class="breadcrumb-link breadcrumb-current">${results.name}</a>
@@ -109,12 +103,19 @@ function favoriteFunction() {
 const cartButton = document.querySelector(".add-to-cart-button");
 const cartDiv = document.querySelector(".cart-div");
 const selectedPlatform = document.getElementById('selectPlatform');
+const select = document.querySelector(".platform-select");
 let count = 0;
 
 cartButton.onclick = function addToCart() {
-    showCartSymbol();
-    changeCartLink(id);
-    count++;
+    if (selectedPlatform.value === "not-selected") {
+        unselectedValue();
+    }
+    else {
+        showCartSymbol();
+        changeCartLink(id);
+        count++;
+        select.style.border = "1px solid #0ED6D6";
+    }
 }
 
 function showCartSymbol() {
@@ -130,15 +131,21 @@ function changeCartLink(id) {
     cartLink2.href = "cart.html?id=" + id + "&platform=" + selectedPlatform.value;
 }
 
+// IF NOT SELECTED PLATFORM
+
+function unselectedValue() {
+    select.style.border = "1px solid #ff443d";
+}
+
 
 // PLATFORM SELECT
 
 function createOptions(results) {
     const select = document.querySelector(".platform-select");
-    for (let i = 0; i < results.parent_platforms.length; i++) {
+    for (let i = 0; i < results.tags.length; i++) {
         let option = document.createElement('option');
-        option.text = results.parent_platforms[i].platform.name;
-        option.value = results.parent_platforms[i].platform.name;
+        option.text = results.tags[i].name;
+        option.value = results.tags[i].name;
         select.appendChild(option);
     }
 }

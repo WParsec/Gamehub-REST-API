@@ -11,7 +11,7 @@ const params = new URLSearchParams(queryString);
 const id = params.get("id")
 const platform = params.get("platform")
 
-const url = "https://api.rawg.io/api/games/" + id + "?key=54582cd735a340b89b17702eae51578b";
+const url = "https://dev-spider.com/gamehubapi/wp-json/wc/v3/products/" + id + "?consumer_key=ck_8f59d0ac6a2741b3f904f5864c1474aa1bdc892e&consumer_secret=cs_5fb219e10c9e99bb26618c370e601285c0c1e8ff";
 
 async function getGame() {
     try {
@@ -19,8 +19,6 @@ async function getGame() {
         const results = await response.json();
 
         console.log(results);
-
-        console.log(results.parent_platforms)
 
         createHTML(results);
 
@@ -32,10 +30,10 @@ async function getGame() {
 getGame();
 
 function createHTML(results) {
-    cartImageDiv.innerHTML += `<div class="cart-game-image" style="background-image: url(${results.background_image});"></div>`
+    cartImageDiv.innerHTML += `<div class="cart-game-image" style="background-image: url(${results.images[0].src});"></div>`
     cartInfoFlex.innerHTML += `<div class="cart-info-upper">
                                 <h2 class="cart-game-name">${results.name}</h2>
-                              <p class="product-text">Rating: ${results.rating}/5</p>
+                              <p class="product-text">Rating: ${results.attributes[0].options[0]}/5</p>
                               <p class="product-text">Platform: ${platform}</p>
                               <p class="product-text">Condition: New</p>
                               </div>`
