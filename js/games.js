@@ -16,6 +16,7 @@ async function getGames() {
             gridContainer.innerHTML += `<a class="card" href="product.html?id=${game[i].id}">
                                             <div class="image-div" style="background-image: url(${game[i].images[0].src});"></div>
                                             <h3>${game[i].name}</h3>
+                                            <span class="product-price-index">$${game[i].price}<span>
                                             </a>`
             if (i === 17) {
                 break;
