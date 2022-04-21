@@ -3,11 +3,9 @@
     src: url(../fonts/nulshock\ bd.ttf);
 }
 
-@font-face {
-    font-family: 'Montserrat', sans-serif;
-    src: url(../fonts/Montserrat-Regular.ttf) format('normal');
-    src: url(../fonts/Montserrat-Bold.ttf) format('bold');
-}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates&family=Montserrat:wght@600&family=Pacifico&display=swap');
 
 
 /* --------------------------------------- PAGE --------------------------------------- */
