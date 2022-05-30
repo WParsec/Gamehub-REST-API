@@ -23,7 +23,7 @@ Link to site: [https://serene-wing-27b334.netlify.app/]
 1. Clone the repo:
 
 ```bash
-git clone git@github.com
+git clone [git@github.com](https://github.com/WParsec/Gamehub-REST-API)
 ```
 
 ## Contributing
