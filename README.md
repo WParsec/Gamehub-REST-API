@@ -16,7 +16,7 @@ A practice site we have been working on here and there through out the first yea
 
 ## Getting Started
 
-Link to site: [https://serene-wing-27b334.netlify.app/]
+Link to site: [[https://serene-wing-27b334.netlify.app/]](https://celebrated-lollipop-55e544.netlify.app/index.html)
 
 ### Installing
 
