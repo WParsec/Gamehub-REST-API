@@ -6,7 +6,9 @@ Cross course project from first year at Noroff, Frontend Development 2 year stud
 
 ## Description
 
-A practice site we have been working on here and there through out the first year of the studies. Its using wordpress REST API for the products. 
+Our first project of the 1st year, using HTML, CSS and JS and REST API to Wordpress. 
+This is my first ever launched website. Many functions are missing and code is far from professional, but it recieved exceptional feedback at the time.
+Last time I checked, I did no longer have access to the API, and I will unfortunately not return to this project to fix it. 
 
 ## Built With
 
